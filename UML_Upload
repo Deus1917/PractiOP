@@ -59,3 +59,18 @@ endif
 :сохраните объект;
 ->
 (*)
+#5
+@startuml
+node "Полностью готовое приложение" as node1{
+ component "pyqt5" as node3
+ component "Python" as node4
+ component "Приложение" as node5
+}
+node "Компьютер пользователя" as node2{
+ component "Приложение" as node6
+}
+node3 -> node4
+node4 --> node5
+node5 .. node6 :Интернет
+left to right direction 
+@enduml
