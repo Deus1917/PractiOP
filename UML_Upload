@@ -1,1 +1,28 @@
-
+1#
+@startuml
+actor Пользователь
+(Выбор холста) as (vibor)
+(Выбор кисти) as (kisti)
+(Выбор геометрической фигуры) as (geom)
+(Удалене эскиза холста) as (delete_esc)
+(Редактирование цвета холста) as (redec_holst)
+(Редактирование размера кисти) as (redec_razm)
+(Выбор цвета кисти) as (vibor_cveta)
+(Редактирование палитры цветов) as (redec_palitr)
+(Редакторование палитры цветов по RGB-обозначению) as (redec_rgb)
+(Редактирование геоетричекой фигуры) as (redec_geom)
+(Редактирование цвета геометрической фигуры) as (redec_cvet_geom)
+Пользователь -->  vibor
+Пользователь --> kisti
+Пользователь --> geom
+vibor --> delete_esc : Включить
+vibor --> redec_razm : Включить
+kisti --> redec_holst : Включить
+kisti --> vibor_cveta : Включить
+vibor_cveta --> redec_palitr : Включить
+vibor_cveta --> redec_rgb : Расширить
+geom --> redec_geom : Включить
+geom --> redec_cvet_geom : Включить
+left to right direction 
+@enduml
+#2
