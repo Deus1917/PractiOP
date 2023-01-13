@@ -108,3 +108,28 @@ holst .. kist
 holst .. sterka
 left to right direction 
 @enduml
+#4 
+@startuml
+(*)
+->
+:Хотите добавить геометрическую фигуру?;
+if () then
+->:Да;
+:Выберите фигуру;
+if () then
+->:квадрат;
+:Добавился квадрат;
+else
+if () then
+->:круг;
+:Добавился круг;
+else
+->:треугольник;
+:Добавился треугольник;
+endif
+endif
+endif
+:Сохраните объект;
+(*)
+
+@enduml
